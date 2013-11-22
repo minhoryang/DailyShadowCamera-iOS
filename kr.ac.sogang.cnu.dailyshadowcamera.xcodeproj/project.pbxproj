@@ -19,8 +19,6 @@
 		F3F8E8E4183F5B51003D86B1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F8E8E3183F5B51003D86B1 /* XCTest.framework */; };
 		F3F8E8E5183F5B51003D86B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F8E8C4183F5B51003D86B1 /* Foundation.framework */; };
 		F3F8E8E6183F5B51003D86B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F8E8C8183F5B51003D86B1 /* UIKit.framework */; };
-		F3F8E8EE183F5B51003D86B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F3F8E8EC183F5B51003D86B1 /* InfoPlist.strings */; };
-		F3F8E8F0183F5B51003D86B1 /* kr_ac_sogang_cnu_dailyshadowcameraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F8E8EF183F5B51003D86B1 /* kr_ac_sogang_cnu_dailyshadowcameraTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +48,6 @@
 		F3F8E8DC183F5B51003D86B1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F3F8E8E2183F5B51003D86B1 /* kr.ac.sogang.cnu.dailyshadowcameraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kr.ac.sogang.cnu.dailyshadowcameraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F8E8E3183F5B51003D86B1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		F3F8E8EB183F5B51003D86B1 /* kr.ac.sogang.cnu.dailyshadowcameraTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "kr.ac.sogang.cnu.dailyshadowcameraTests-Info.plist"; sourceTree = "<group>"; };
-		F3F8E8ED183F5B51003D86B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F3F8E8EF183F5B51003D86B1 /* kr_ac_sogang_cnu_dailyshadowcameraTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = kr_ac_sogang_cnu_dailyshadowcameraTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				F3F8E8CA183F5B51003D86B1 /* kr.ac.sogang.cnu.dailyshadowcamera */,
-				F3F8E8E9183F5B51003D86B1 /* kr.ac.sogang.cnu.dailyshadowcameraTests */,
 				F3F8E8C3183F5B51003D86B1 /* Frameworks */,
 				F3F8E8C2183F5B51003D86B1 /* Products */,
 			);
@@ -130,24 +124,6 @@
 				F3F8E8CD183F5B51003D86B1 /* InfoPlist.strings */,
 				F3F8E8D0183F5B51003D86B1 /* main.m */,
 				F3F8E8D2183F5B51003D86B1 /* kr.ac.sogang.cnu.dailyshadowcamera-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F3F8E8E9183F5B51003D86B1 /* kr.ac.sogang.cnu.dailyshadowcameraTests */ = {
-			isa = PBXGroup;
-			children = (
-				F3F8E8EF183F5B51003D86B1 /* kr_ac_sogang_cnu_dailyshadowcameraTests.m */,
-				F3F8E8EA183F5B51003D86B1 /* Supporting Files */,
-			);
-			path = kr.ac.sogang.cnu.dailyshadowcameraTests;
-			sourceTree = "<group>";
-		};
-		F3F8E8EA183F5B51003D86B1 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F3F8E8EB183F5B51003D86B1 /* kr.ac.sogang.cnu.dailyshadowcameraTests-Info.plist */,
-				F3F8E8EC183F5B51003D86B1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -239,7 +215,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3F8E8EE183F5B51003D86B1 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +235,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3F8E8F0183F5B51003D86B1 /* kr_ac_sogang_cnu_dailyshadowcameraTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,14 +263,6 @@
 				F3F8E8D7183F5B51003D86B1 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F3F8E8EC183F5B51003D86B1 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F3F8E8ED183F5B51003D86B1 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -463,6 +429,7 @@
 				F3F8E8F5183F5B51003D86B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F3F8E8F6183F5B51003D86B1 /* Build configuration list for PBXNativeTarget "kr.ac.sogang.cnu.dailyshadowcameraTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +438,7 @@
 				F3F8E8F8183F5B51003D86B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
