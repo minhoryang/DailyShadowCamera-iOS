@@ -81,6 +81,7 @@
 {
     if([self source] == UIImagePickerControllerSourceTypeCamera){
         self.realImg = [info valueForKey:UIImagePickerControllerOriginalImage];
+        self.now = NO;
         [self dismissViewControllerAnimated:YES completion:NULL];
     }else{
         self.shadowImg = [info valueForKey:UIImagePickerControllerOriginalImage];
