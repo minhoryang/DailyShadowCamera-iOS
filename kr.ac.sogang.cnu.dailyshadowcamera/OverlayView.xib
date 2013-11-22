@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CNUViewController">
             <connections>
+                <outlet property="BringImage" destination="t1F-3E-XB4" id="sN6-zh-9iW"/>
                 <outlet property="overlayView" destination="1" id="kGq-Tg-auj"/>
                 <outlet property="uiSlider" destination="ayL-nV-iLO" id="S3r-Ke-yEh"/>
             </connections>
@@ -16,11 +17,15 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ayL-nV-iLO">
-                    <rect key="frame" x="18" y="341" width="284" height="34"/>
+                <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t1F-3E-XB4">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="ayL-nV-iLO">
+                    <rect key="frame" x="18" y="343" width="284" height="34"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <connections>
-                        <action selector="uiSlideValueChanged:" destination="-1" eventType="valueChanged" id="QFl-TZ-tPa"/>
+                        <action selector="OpacitySliderChanged:" destination="-1" eventType="valueChanged" id="6o6-ma-VMP"/>
                     </connections>
                 </slider>
             </subviews>

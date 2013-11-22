@@ -11,5 +11,6 @@
 
 @interface CNUViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UISlider *uiSlider;
+@property (weak, nonatomic) IBOutlet UIImageView *BringImage;
 
 @end

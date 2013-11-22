@@ -32,7 +32,7 @@
 
 @implementation CNUViewController
 @synthesize uiSlider;
-
+@synthesize BringImage;
 
 - (void)viewDidLoad
 {
@@ -55,12 +55,14 @@
 
     self.imagePickerController.sourceType = self.source;
     if([self source] == UIImagePickerControllerSourceTypeCamera){
-        self.imagePickerController.showsCameraControls = NO;
+        self.imagePickerController.showsCameraControls = YES;
         
         // xib overlay
         [[NSBundle mainBundle] loadNibNamed:@"OverlayView" owner:self options:nil];
         self.overlayView.frame = self.imagePickerController.view.frame;
         self.imagePickerController.cameraOverlayView = self.overlayView;
+        
+        BringImage.image = self.shadowImg;
     }
     [self presentViewController:self.imagePickerController animated:YES completion:nil];
 }
@@ -116,7 +118,7 @@
 
 - (void)DelayedTransitionCueTo: (UIImagePickerControllerSourceType)source
 {
-    NSDate *fireDate = [NSDate dateWithTimeIntervalSinceNow:5.0];
+    NSDate *fireDate = [NSDate dateWithTimeIntervalSinceNow:2.0];
     NSTimer *Timer = [[NSTimer alloc] initWithFireDate:fireDate interval:1.0 target:self selector:@selector(timedTransitionFire:) userInfo:nil repeats:NO];
     
     [[NSRunLoop mainRunLoop] addTimer:Timer forMode:NSDefaultRunLoopMode];
@@ -139,7 +141,11 @@
 }
 
 
-- (IBAction)uiSlideValueChanged:(id)sender {
-    
+- (IBAction)OpacitySliderChanged:(UISlider *)sender {
+    BringImage.alpha = [sender value];
+
 }
+
+
+
 @end
