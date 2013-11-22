@@ -16,13 +16,14 @@
 @property (strong, nonatomic) IBOutlet UIView *overlayView;
 // ImagePicker
 @property (nonatomic) UIImagePickerController *imagePickerController;
-@property (nonatomic) UIImagePickerControllerSourceType source;
 // Shadow
 @property (nonatomic) UIImage *shadowImg;
 // Real
 @property (nonatomic) UIImage *realImg;
-// Timer
+// Transition
 @property (nonatomic) NSTimer *timer;
+@property (nonatomic) BOOL now;
+@property (nonatomic) UIImagePickerControllerSourceType source;
 @property (nonatomic) UIImagePickerControllerSourceType nextSource;
 
 @end
@@ -37,29 +38,40 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
-    imagePickerController.modalPresentationStyle = UIModalPresentationCurrentContext;
-    imagePickerController.delegate = self;
-    self.imagePickerController = imagePickerController;
     
     self.source = UIImagePickerControllerSourceTypePhotoLibrary;
+    self.now = NO;
     [self performSelector:@selector(runImagePicker) withObject:nil afterDelay:0.50];
 }
 
 
 - (void)runImagePicker
 {
+    self.now = YES;
+    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+    imagePickerController.modalPresentationStyle = UIModalPresentationCurrentContext;
+    imagePickerController.delegate = self;
+    self.imagePickerController = imagePickerController;
+
     self.imagePickerController.sourceType = self.source;
     if([self source] == UIImagePickerControllerSourceTypeCamera){
-        self.imagePickerController.showsCameraControls = YES;
+        self.imagePickerController.showsCameraControls = NO;
         
         // xib overlay
         [[NSBundle mainBundle] loadNibNamed:@"OverlayView" owner:self options:nil];
         self.overlayView.frame = self.imagePickerController.view.frame;
         self.imagePickerController.cameraOverlayView = self.overlayView;
-        self.overlayView = nil;
     }
     [self presentViewController:self.imagePickerController animated:YES completion:nil];
+}
+
+
+-(void)viewWillAppear:(BOOL)animated {
+    if([self now])
+    if([self source] == UIImagePickerControllerSourceTypeCamera){
+        [self presentViewController:self.imagePickerController animated:animated completion:nil];
+        self.imagePickerController.cameraOverlayView = self.overlayView;
+    }
 }
 
 
