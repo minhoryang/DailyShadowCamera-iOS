@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "0500"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F3F8E8C0183F5B51003D86B1"
+               BuildableName = "kr.ac.sogang.cnu.dailyshadowcamera.app"
+               BlueprintName = "kr.ac.sogang.cnu.dailyshadowcamera"
+               ReferencedContainer = "container:kr.ac.sogang.cnu.dailyshadowcamera.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      buildConfiguration = "Debug">
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F3F8E8E1183F5B51003D86B1"
+               BuildableName = "kr.ac.sogang.cnu.dailyshadowcameraTests.xctest"
+               BlueprintName = "kr.ac.sogang.cnu.dailyshadowcameraTests"
+               ReferencedContainer = "container:kr.ac.sogang.cnu.dailyshadowcamera.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "F3F8E8C0183F5B51003D86B1"
+            BuildableName = "kr.ac.sogang.cnu.dailyshadowcamera.app"
+            BlueprintName = "kr.ac.sogang.cnu.dailyshadowcamera"
+            ReferencedContainer = "container:kr.ac.sogang.cnu.dailyshadowcamera.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </TestAction>
+   <LaunchAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "F3F8E8C0183F5B51003D86B1"
+            BuildableName = "kr.ac.sogang.cnu.dailyshadowcamera.app"
+            BlueprintName = "kr.ac.sogang.cnu.dailyshadowcamera"
+            ReferencedContainer = "container:kr.ac.sogang.cnu.dailyshadowcamera.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Release"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "F3F8E8C0183F5B51003D86B1"
+            BuildableName = "kr.ac.sogang.cnu.dailyshadowcamera.app"
+            BlueprintName = "kr.ac.sogang.cnu.dailyshadowcamera"
+            ReferencedContainer = "container:kr.ac.sogang.cnu.dailyshadowcamera.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>
