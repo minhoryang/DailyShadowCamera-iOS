@@ -9,7 +9,7 @@
 #import "CNUViewController.h"
 
 @interface CNUViewController ()
-
+@property (nonatomic) UIImagePickerController *imagePickerController;
 @end
 
 @implementation CNUViewController
@@ -19,6 +19,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     // 안녕하세요.
+    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+    imagePickerController.modalPresentationStyle = UIModalPresentationCurrentContext;
+    imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePickerController.delegate = self;
+    self.imagePickerController = imagePickerController;
+    [self presentViewController:self.imagePickerController animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F3F1F481183F60F10055D137 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F1F480183F60F10055D137 /* AssetsLibrary.framework */; };
 		F3F8E8C5183F5B51003D86B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F8E8C4183F5B51003D86B1 /* Foundation.framework */; };
 		F3F8E8C7183F5B51003D86B1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F8E8C6183F5B51003D86B1 /* CoreGraphics.framework */; };
 		F3F8E8C9183F5B51003D86B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F8E8C8183F5B51003D86B1 /* UIKit.framework */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F3F1F480183F60F10055D137 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		F3F8E8C1183F5B51003D86B1 /* kr.ac.sogang.cnu.dailyshadowcamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kr.ac.sogang.cnu.dailyshadowcamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F8E8C4183F5B51003D86B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F3F8E8C6183F5B51003D86B1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3F1F481183F60F10055D137 /* AssetsLibrary.framework in Frameworks */,
 				F3F8E8C7183F5B51003D86B1 /* CoreGraphics.framework in Frameworks */,
 				F3F8E8C9183F5B51003D86B1 /* UIKit.framework in Frameworks */,
 				F3F8E8C5183F5B51003D86B1 /* Foundation.framework in Frameworks */,
@@ -95,6 +98,7 @@
 		F3F8E8C3183F5B51003D86B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F3F1F480183F60F10055D137 /* AssetsLibrary.framework */,
 				F3F8E8C4183F5B51003D86B1 /* Foundation.framework */,
 				F3F8E8C6183F5B51003D86B1 /* CoreGraphics.framework */,
 				F3F8E8C8183F5B51003D86B1 /* UIKit.framework */,
@@ -176,6 +180,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = CNU;
 				TargetAttributes = {
+					F3F8E8C0183F5B51003D86B1 = {
+						DevelopmentTeam = 3Y3Z2Z567H;
+					};
 					F3F8E8E1183F5B51003D86B1 = {
 						TestTargetID = F3F8E8C0183F5B51003D86B1;
 					};
@@ -349,7 +356,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "kr.ac.sogang.cnu.dailyshadowcamera/kr.ac.sogang.cnu.dailyshadowcamera-Prefix.pch";
 				INFOPLIST_FILE = "kr.ac.sogang.cnu.dailyshadowcamera/kr.ac.sogang.cnu.dailyshadowcamera-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -363,7 +372,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "kr.ac.sogang.cnu.dailyshadowcamera/kr.ac.sogang.cnu.dailyshadowcamera-Prefix.pch";
 				INFOPLIST_FILE = "kr.ac.sogang.cnu.dailyshadowcamera/kr.ac.sogang.cnu.dailyshadowcamera-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
