@@ -10,5 +10,6 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 
 @interface CNUViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@property (weak, nonatomic) IBOutlet UISlider *uiSlider;
 
 @end
