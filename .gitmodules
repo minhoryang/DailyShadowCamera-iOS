@@ -1,0 +1,3 @@
+[submodule "kr.ac.sogang.cnu.dailyshadowcamera/ALAssetsLibrary-CustomPhotoAlbum"]
+	path = kr.ac.sogang.cnu.dailyshadowcamera/ALAssetsLibrary-CustomPhotoAlbum
+	url = git@github.com:Kjuly/ALAssetsLibrary-CustomPhotoAlbum.git

@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AssetsLibrary/AssetsLibrary.h>
+#import "ALAssetsLibrary+CustomPhotoAlbum.h"
 
-@interface CNUViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface CNUViewController : UIViewController <UIAlertViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UISlider *uiSlider;
 @property (weak, nonatomic) IBOutlet UIImageView *BringImage;
 

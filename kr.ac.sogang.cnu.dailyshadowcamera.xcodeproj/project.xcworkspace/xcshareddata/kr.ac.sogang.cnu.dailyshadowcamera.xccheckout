@@ -5,11 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>9660130A-C0F4-4242-B780-30CD24140C2C</string>
+	<string>5061C4BD-E175-4488-B486-93AD4C462352</string>
 	<key>IDESourceControlProjectName</key>
 	<string>kr.ac.sogang.cnu.dailyshadowcamera</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>1C7C0583-B1CA-4B7D-A611-6BDD5A6F383A</key>
+		<string>ssh://github.com/Kjuly/ALAssetsLibrary-CustomPhotoAlbum.git</string>
 		<key>ABAFD41E-17B9-4BFF-9890-2D86E3E47CE4</key>
 		<string>ssh://github.com/minhoryang/DailyShadowCamera-iOS.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>kr.ac.sogang.cnu.dailyshadowcamera.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>1C7C0583-B1CA-4B7D-A611-6BDD5A6F383A</key>
+		<string>../../kr.ac.sogang.cnu.dailyshadowcamera/ALAssetsLibrary-CustomPhotoAlbum</string>
 		<key>ABAFD41E-17B9-4BFF-9890-2D86E3E47CE4</key>
 		<string>../..</string>
 	</dict>
@@ -28,6 +32,14 @@
 	<string>ABAFD41E-17B9-4BFF-9890-2D86E3E47CE4</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1C7C0583-B1CA-4B7D-A611-6BDD5A6F383A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ALAssetsLibrary-CustomPhotoAlbum</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

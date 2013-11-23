@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		E54F1D4A183F65F400CD738A /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54F1D49183F65F400CD738A /* OverlayView.xib */; };
+		F32793551840CE90005B7155 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F32793261840CE90005B7155 /* .gitignore */; };
+		F32793561840CE90005B7155 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = F32793291840CE90005B7155 /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
+		F32793711840CE90005B7155 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F32793531840CE90005B7155 /* LICENSE */; };
+		F32793721840CE90005B7155 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F32793541840CE90005B7155 /* README.md */; };
 		F3F1F481183F60F10055D137 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F1F480183F60F10055D137 /* AssetsLibrary.framework */; };
 		F3F8E8C5183F5B51003D86B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F8E8C4183F5B51003D86B1 /* Foundation.framework */; };
 		F3F8E8C7183F5B51003D86B1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F8E8C6183F5B51003D86B1 /* CoreGraphics.framework */; };
@@ -35,6 +39,11 @@
 
 /* Begin PBXFileReference section */
 		E54F1D49183F65F400CD738A /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
+		F32793261840CE90005B7155 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		F32793281840CE90005B7155 /* ALAssetsLibrary+CustomPhotoAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+CustomPhotoAlbum.h"; sourceTree = "<group>"; };
+		F32793291840CE90005B7155 /* ALAssetsLibrary+CustomPhotoAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+CustomPhotoAlbum.m"; sourceTree = "<group>"; };
+		F32793531840CE90005B7155 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F32793541840CE90005B7155 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		F3F1F480183F60F10055D137 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		F3F8E8C1183F5B51003D86B1 /* kr.ac.sogang.cnu.dailyshadowcamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kr.ac.sogang.cnu.dailyshadowcamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F8E8C4183F5B51003D86B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -50,7 +59,6 @@
 		F3F8E8D9183F5B51003D86B1 /* CNUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CNUViewController.h; sourceTree = "<group>"; };
 		F3F8E8DA183F5B51003D86B1 /* CNUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CNUViewController.m; sourceTree = "<group>"; };
 		F3F8E8DC183F5B51003D86B1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F3F8E8E2183F5B51003D86B1 /* kr.ac.sogang.cnu.dailyshadowcameraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kr.ac.sogang.cnu.dailyshadowcameraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F8E8E3183F5B51003D86B1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -79,6 +87,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F32793251840CE90005B7155 /* ALAssetsLibrary-CustomPhotoAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				F32793261840CE90005B7155 /* .gitignore */,
+				F32793271840CE90005B7155 /* ALAssetsLibrary-CustomPhotoAlbum */,
+				F32793531840CE90005B7155 /* LICENSE */,
+				F32793541840CE90005B7155 /* README.md */,
+			);
+			path = "ALAssetsLibrary-CustomPhotoAlbum";
+			sourceTree = "<group>";
+		};
+		F32793271840CE90005B7155 /* ALAssetsLibrary-CustomPhotoAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				F32793281840CE90005B7155 /* ALAssetsLibrary+CustomPhotoAlbum.h */,
+				F32793291840CE90005B7155 /* ALAssetsLibrary+CustomPhotoAlbum.m */,
+			);
+			path = "ALAssetsLibrary-CustomPhotoAlbum";
+			sourceTree = "<group>";
+		};
 		F3F8E8B8183F5B51003D86B1 = {
 			isa = PBXGroup;
 			children = (
@@ -92,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				F3F8E8C1183F5B51003D86B1 /* kr.ac.sogang.cnu.dailyshadowcamera.app */,
-				F3F8E8E2183F5B51003D86B1 /* kr.ac.sogang.cnu.dailyshadowcameraTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +139,7 @@
 		F3F8E8CA183F5B51003D86B1 /* kr.ac.sogang.cnu.dailyshadowcamera */ = {
 			isa = PBXGroup;
 			children = (
+				F32793251840CE90005B7155 /* ALAssetsLibrary-CustomPhotoAlbum */,
 				F3F8E8D3183F5B51003D86B1 /* CNUAppDelegate.h */,
 				F3F8E8D4183F5B51003D86B1 /* CNUAppDelegate.m */,
 				F3F8E8D6183F5B51003D86B1 /* Main.storyboard */,
@@ -155,24 +183,6 @@
 			productReference = F3F8E8C1183F5B51003D86B1 /* kr.ac.sogang.cnu.dailyshadowcamera.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F3F8E8E1183F5B51003D86B1 /* kr.ac.sogang.cnu.dailyshadowcameraTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F3F8E8F6183F5B51003D86B1 /* Build configuration list for PBXNativeTarget "kr.ac.sogang.cnu.dailyshadowcameraTests" */;
-			buildPhases = (
-				F3F8E8DE183F5B51003D86B1 /* Sources */,
-				F3F8E8DF183F5B51003D86B1 /* Frameworks */,
-				F3F8E8E0183F5B51003D86B1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F3F8E8E8183F5B51003D86B1 /* PBXTargetDependency */,
-			);
-			name = kr.ac.sogang.cnu.dailyshadowcameraTests;
-			productName = kr.ac.sogang.cnu.dailyshadowcameraTests;
-			productReference = F3F8E8E2183F5B51003D86B1 /* kr.ac.sogang.cnu.dailyshadowcameraTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -185,9 +195,6 @@
 				TargetAttributes = {
 					F3F8E8C0183F5B51003D86B1 = {
 						DevelopmentTeam = 3Y3Z2Z567H;
-					};
-					F3F8E8E1183F5B51003D86B1 = {
-						TestTargetID = F3F8E8C0183F5B51003D86B1;
 					};
 				};
 			};
@@ -205,7 +212,6 @@
 			projectRoot = "";
 			targets = (
 				F3F8E8C0183F5B51003D86B1 /* kr.ac.sogang.cnu.dailyshadowcamera */,
-				F3F8E8E1183F5B51003D86B1 /* kr.ac.sogang.cnu.dailyshadowcameraTests */,
 			);
 		};
 /* End PBXProject section */
@@ -215,6 +221,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F32793711840CE90005B7155 /* LICENSE in Resources */,
+				F32793721840CE90005B7155 /* README.md in Resources */,
+				F32793551840CE90005B7155 /* .gitignore in Resources */,
 				F3F8E8DD183F5B51003D86B1 /* Images.xcassets in Resources */,
 				E54F1D4A183F65F400CD738A /* OverlayView.xib in Resources */,
 				F3F8E8CF183F5B51003D86B1 /* InfoPlist.strings in Resources */,
@@ -239,6 +248,7 @@
 				F3F8E8D1183F5B51003D86B1 /* main.m in Sources */,
 				F3F8E8D5183F5B51003D86B1 /* CNUAppDelegate.m in Sources */,
 				F3F8E8DB183F5B51003D86B1 /* CNUViewController.m in Sources */,
+				F32793561840CE90005B7155 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +397,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/kr.ac.sogang.cnu.dailyshadowcamera.app/kr.ac.sogang.cnu.dailyshadowcamera";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -399,9 +408,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "kr.ac.sogang.cnu.dailyshadowcameraTests/kr.ac.sogang.cnu.dailyshadowcameraTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -410,7 +417,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/kr.ac.sogang.cnu.dailyshadowcamera.app/kr.ac.sogang.cnu.dailyshadowcamera";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -418,9 +424,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "kr.ac.sogang.cnu.dailyshadowcamera/kr.ac.sogang.cnu.dailyshadowcamera-Prefix.pch";
-				INFOPLIST_FILE = "kr.ac.sogang.cnu.dailyshadowcameraTests/kr.ac.sogang.cnu.dailyshadowcameraTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -442,15 +446,6 @@
 			buildConfigurations = (
 				F3F8E8F4183F5B51003D86B1 /* Debug */,
 				F3F8E8F5183F5B51003D86B1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F3F8E8F6183F5B51003D86B1 /* Build configuration list for PBXNativeTarget "kr.ac.sogang.cnu.dailyshadowcameraTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F3F8E8F7183F5B51003D86B1 /* Debug */,
-				F3F8E8F8183F5B51003D86B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
