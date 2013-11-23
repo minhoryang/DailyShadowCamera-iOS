@@ -12,19 +12,19 @@
 
 @interface CNUViewController ()
 
-// Outlet
-@property (strong, nonatomic) IBOutlet UIView *overlayView;
-// ImagePicker
-@property (nonatomic) UIImagePickerController *imagePickerController;
-// Shadow
-@property (nonatomic) UIImage *shadowImg;
-// Real
-@property (nonatomic) UIImage *realImg;
-// Transition
-@property (nonatomic) NSTimer *timer;
-@property (nonatomic) BOOL isCameraReady;
-@property (nonatomic) UIImagePickerControllerSourceType source;
-@property (nonatomic) UIImagePickerControllerSourceType nextSource;
+    // Outlet
+    @property (strong, nonatomic) IBOutlet UIView *overlayView;
+    // ImagePicker
+    @property (nonatomic) UIImagePickerController *imagePickerController;
+    // Shadow
+    @property (nonatomic) UIImage *shadowImg;
+    // Real
+    @property (nonatomic) UIImage *realImg;
+    // Transition
+    @property (nonatomic) NSTimer *timer;
+    @property (nonatomic) BOOL isCameraReady;
+    @property (nonatomic) UIImagePickerControllerSourceType source;
+    @property (nonatomic) UIImagePickerControllerSourceType nextSource;
 
 @end
 
@@ -32,8 +32,8 @@
 
 
 @implementation CNUViewController
-@synthesize uiSlider;
-@synthesize BringImage;
+    @synthesize uiSlider;
+    @synthesize BringImage;
 
 - (void)viewDidLoad
 {
