@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		E54F1D4A183F65F400CD738A /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54F1D49183F65F400CD738A /* OverlayView.xib */; };
-		F32793551840CE90005B7155 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F32793261840CE90005B7155 /* .gitignore */; };
-		F32793561840CE90005B7155 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = F32793291840CE90005B7155 /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
-		F32793711840CE90005B7155 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F32793531840CE90005B7155 /* LICENSE */; };
-		F32793721840CE90005B7155 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F32793541840CE90005B7155 /* README.md */; };
 		E5A8C2401840CD8200B5AA84 /* Icon_36-128.png in Resources */ = {isa = PBXBuildFile; fileRef = E5A8C23F1840CD8200B5AA84 /* Icon_36-128.png */; };
 		E5A8C2441840D1AF00B5AA84 /* white-circle-md.png in Resources */ = {isa = PBXBuildFile; fileRef = E5A8C2431840D1AF00B5AA84 /* white-circle-md.png */; };
 		E5A8C2461840D36800B5AA84 /* backspace--arrow-point-to-left_318-1409.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E5A8C2451840D36800B5AA84 /* backspace--arrow-point-to-left_318-1409.jpg */; };
 		E5A8C2481840D5D100B5AA84 /* left_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = E5A8C2471840D5D100B5AA84 /* left_arrow.png */; };
+		F32793551840CE90005B7155 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F32793261840CE90005B7155 /* .gitignore */; };
+		F32793561840CE90005B7155 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = F32793291840CE90005B7155 /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
+		F32793711840CE90005B7155 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F32793531840CE90005B7155 /* LICENSE */; };
+		F32793721840CE90005B7155 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F32793541840CE90005B7155 /* README.md */; };
 		F3F1F481183F60F10055D137 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F1F480183F60F10055D137 /* AssetsLibrary.framework */; };
 		F3F8E8C5183F5B51003D86B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F8E8C4183F5B51003D86B1 /* Foundation.framework */; };
 		F3F8E8C7183F5B51003D86B1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F8E8C6183F5B51003D86B1 /* CoreGraphics.framework */; };
@@ -26,34 +26,21 @@
 		F3F8E8D8183F5B51003D86B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F8E8D6183F5B51003D86B1 /* Main.storyboard */; };
 		F3F8E8DB183F5B51003D86B1 /* CNUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F8E8DA183F5B51003D86B1 /* CNUViewController.m */; };
 		F3F8E8DD183F5B51003D86B1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3F8E8DC183F5B51003D86B1 /* Images.xcassets */; };
-		F3F8E8E4183F5B51003D86B1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F8E8E3183F5B51003D86B1 /* XCTest.framework */; };
-		F3F8E8E5183F5B51003D86B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F8E8C4183F5B51003D86B1 /* Foundation.framework */; };
-		F3F8E8E6183F5B51003D86B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F8E8C8183F5B51003D86B1 /* UIKit.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		F3F8E8E7183F5B51003D86B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F3F8E8B9183F5B51003D86B1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F3F8E8C0183F5B51003D86B1;
-			remoteInfo = kr.ac.sogang.cnu.dailyshadowcamera;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E54F1D49183F65F400CD738A /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
+		E5A8C23F1840CD8200B5AA84 /* Icon_36-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon_36-128.png"; sourceTree = "<group>"; };
+		E5A8C2431840D1AF00B5AA84 /* white-circle-md.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-circle-md.png"; sourceTree = "<group>"; };
+		E5A8C2451840D36800B5AA84 /* backspace--arrow-point-to-left_318-1409.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "backspace--arrow-point-to-left_318-1409.jpg"; sourceTree = "<group>"; };
+		E5A8C2471840D5D100B5AA84 /* left_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_arrow.png; sourceTree = "<group>"; };
 		F32793261840CE90005B7155 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F32793281840CE90005B7155 /* ALAssetsLibrary+CustomPhotoAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+CustomPhotoAlbum.h"; sourceTree = "<group>"; };
 		F32793291840CE90005B7155 /* ALAssetsLibrary+CustomPhotoAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+CustomPhotoAlbum.m"; sourceTree = "<group>"; };
 		F32793531840CE90005B7155 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F32793541840CE90005B7155 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		E5A8C23F1840CD8200B5AA84 /* Icon_36-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon_36-128.png"; sourceTree = "<group>"; };
-		E5A8C2431840D1AF00B5AA84 /* white-circle-md.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-circle-md.png"; sourceTree = "<group>"; };
-		E5A8C2451840D36800B5AA84 /* backspace--arrow-point-to-left_318-1409.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "backspace--arrow-point-to-left_318-1409.jpg"; sourceTree = "<group>"; };
-		E5A8C2471840D5D100B5AA84 /* left_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_arrow.png; sourceTree = "<group>"; };
 		F3F1F480183F60F10055D137 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		F3F8E8C1183F5B51003D86B1 /* kr.ac.sogang.cnu.dailyshadowcamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kr.ac.sogang.cnu.dailyshadowcamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3F8E8C1183F5B51003D86B1 /* DailyShadow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyShadow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F8E8C4183F5B51003D86B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F3F8E8C6183F5B51003D86B1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F3F8E8C8183F5B51003D86B1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -82,19 +69,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3F8E8DF183F5B51003D86B1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F3F8E8E4183F5B51003D86B1 /* XCTest.framework in Frameworks */,
-				F3F8E8E6183F5B51003D86B1 /* UIKit.framework in Frameworks */,
-				F3F8E8E5183F5B51003D86B1 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F30985E11840F158009C1AA9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E5A8C2451840D36800B5AA84 /* backspace--arrow-point-to-left_318-1409.jpg */,
+				E5A8C2431840D1AF00B5AA84 /* white-circle-md.png */,
+				E5A8C2471840D5D100B5AA84 /* left_arrow.png */,
+				E5A8C23F1840CD8200B5AA84 /* Icon_36-128.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		F32793251840CE90005B7155 /* ALAssetsLibrary-CustomPhotoAlbum */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,7 +115,7 @@
 		F3F8E8C2183F5B51003D86B1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F3F8E8C1183F5B51003D86B1 /* kr.ac.sogang.cnu.dailyshadowcamera.app */,
+				F3F8E8C1183F5B51003D86B1 /* DailyShadow.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,6 +135,7 @@
 		F3F8E8CA183F5B51003D86B1 /* kr.ac.sogang.cnu.dailyshadowcamera */ = {
 			isa = PBXGroup;
 			children = (
+				F30985E11840F158009C1AA9 /* Images */,
 				F32793251840CE90005B7155 /* ALAssetsLibrary-CustomPhotoAlbum */,
 				F3F8E8D3183F5B51003D86B1 /* CNUAppDelegate.h */,
 				F3F8E8D4183F5B51003D86B1 /* CNUAppDelegate.m */,
@@ -154,10 +143,6 @@
 				F3F8E8D9183F5B51003D86B1 /* CNUViewController.h */,
 				F3F8E8DA183F5B51003D86B1 /* CNUViewController.m */,
 				F3F8E8DC183F5B51003D86B1 /* Images.xcassets */,
-				E5A8C2451840D36800B5AA84 /* backspace--arrow-point-to-left_318-1409.jpg */,
-				E5A8C2431840D1AF00B5AA84 /* white-circle-md.png */,
-				E5A8C2471840D5D100B5AA84 /* left_arrow.png */,
-				E5A8C23F1840CD8200B5AA84 /* Icon_36-128.png */,
 				F3F8E8CB183F5B51003D86B1 /* Supporting Files */,
 				E54F1D49183F65F400CD738A /* OverlayView.xib */,
 			);
@@ -192,7 +177,7 @@
 			);
 			name = kr.ac.sogang.cnu.dailyshadowcamera;
 			productName = kr.ac.sogang.cnu.dailyshadowcamera;
-			productReference = F3F8E8C1183F5B51003D86B1 /* kr.ac.sogang.cnu.dailyshadowcamera.app */;
+			productReference = F3F8E8C1183F5B51003D86B1 /* DailyShadow.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -247,13 +232,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3F8E8E0183F5B51003D86B1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -268,22 +246,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3F8E8DE183F5B51003D86B1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F3F8E8E8183F5B51003D86B1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F3F8E8C0183F5B51003D86B1 /* kr.ac.sogang.cnu.dailyshadowcamera */;
-			targetProxy = F3F8E8E7183F5B51003D86B1 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F3F8E8CD183F5B51003D86B1 /* InfoPlist.strings */ = {
@@ -387,7 +350,7 @@
 				GCC_PREFIX_HEADER = "kr.ac.sogang.cnu.dailyshadowcamera/kr.ac.sogang.cnu.dailyshadowcamera-Prefix.pch";
 				INFOPLIST_FILE = "kr.ac.sogang.cnu.dailyshadowcamera/kr.ac.sogang.cnu.dailyshadowcamera-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DailyShadow;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -403,45 +366,9 @@
 				GCC_PREFIX_HEADER = "kr.ac.sogang.cnu.dailyshadowcamera/kr.ac.sogang.cnu.dailyshadowcamera-Prefix.pch";
 				INFOPLIST_FILE = "kr.ac.sogang.cnu.dailyshadowcamera/kr.ac.sogang.cnu.dailyshadowcamera-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DailyShadow;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		F3F8E8F7183F5B51003D86B1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "kr.ac.sogang.cnu.dailyshadowcamera/kr.ac.sogang.cnu.dailyshadowcamera-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		F3F8E8F8183F5B51003D86B1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "kr.ac.sogang.cnu.dailyshadowcamera/kr.ac.sogang.cnu.dailyshadowcamera-Prefix.pch";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
