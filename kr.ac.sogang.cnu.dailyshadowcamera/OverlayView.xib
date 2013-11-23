@@ -24,6 +24,7 @@
                 <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="ayL-nV-iLO">
                     <rect key="frame" x="18" y="426" width="218" height="34"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="0.39785544360000002" green="0.49292484959999999" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <action selector="OpacitySliderChanged:" destination="-1" eventType="valueChanged" id="6o6-ma-VMP"/>
                     </connections>
