@@ -40,7 +40,11 @@
                     <rect key="frame" x="0.0" y="388" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <items>
-                        <barButtonItem title="back" id="Ud8-cr-ZZH"/>
+                        <barButtonItem title="back" id="Ud8-cr-ZZH">
+                            <connections>
+                                <action selector="done:" destination="-1" id="QiS-TT-ze2"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem title="take picture" id="gFX-hD-DJf">
                             <connections>
                                 <action selector="takepicture:" destination="-1" id="64Z-up-APf"/>

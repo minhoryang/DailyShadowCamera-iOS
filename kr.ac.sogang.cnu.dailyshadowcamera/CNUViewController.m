@@ -27,6 +27,8 @@
     @property (nonatomic) UIImagePickerControllerSourceType source;
     @property (nonatomic) UIImagePickerControllerSourceType nextSource;
 - (IBAction)takepicture:(UIBarButtonItem *)sender;
+- (IBAction)done:(UIBarButtonItem *)sender;
+
 
 
 @end
@@ -93,8 +95,8 @@
         self.realImg = [info valueForKey:UIImagePickerControllerOriginalImage];
         self.isCameraReady = NO;
         
-        [self DelayedTransitionCueTo: UIImagePickerControllerSourceTypePhotoLibrary];
-        [self dismissViewControllerAnimated:YES completion:NULL];
+        //[self DelayedTransitionCueTo: UIImagePickerControllerSourceTypePhotoLibrary];
+        //[self dismissViewControllerAnimated:YES completion:NULL];
     }else{
         self.shadowImg = [info valueForKey:UIImagePickerControllerOriginalImage];
         [self FindingGroupName:info];
@@ -102,6 +104,12 @@
         [self DelayedTransitionCueTo: UIImagePickerControllerSourceTypeCamera];
         [self dismissViewControllerAnimated:YES completion:NULL];
     }
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    //[self dismissViewControllerAnimated:YES completion:NULL];
+    NSLog(@"Cancel\n");
 }
 
 - (void)FindingGroupName:(NSDictionary *)info
@@ -166,4 +174,12 @@
 
 - (IBAction)takepicture:(UIBarButtonItem *)sender {
     [self.imagePickerController takePicture];}
+
+- (IBAction)done:(UIBarButtonItem *)sender {
+            self.isCameraReady = NO;
+        
+        [self DelayedTransitionCueTo: UIImagePickerControllerSourceTypePhotoLibrary];
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    
+}
 @end
