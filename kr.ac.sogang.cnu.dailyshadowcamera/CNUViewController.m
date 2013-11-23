@@ -24,8 +24,11 @@
     @property (nonatomic) BOOL isCameraReady;
     @property (nonatomic) UIImagePickerControllerSourceType source;
     @property (nonatomic) UIImagePickerControllerSourceType nextSource;
-- (IBAction)takepicture:(UIBarButtonItem *)sender;
-- (IBAction)done:(UIBarButtonItem *)sender;
+- (IBAction)takepicture:(UIButton *)sender;
+
+- (IBAction)done:(UIButton *)sender;
+
+- (IBAction)switchCamera:(id)sender;
 
 @end
 
@@ -171,6 +174,15 @@
 - (IBAction)done:(UIBarButtonItem *)sender {
     [self DelayedTransitionCueTo: UIImagePickerControllerSourceTypePhotoLibrary];
     [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (IBAction)switchCamera:(id)sender {
+    if (self.imagePickerController.cameraDevice == UIImagePickerControllerCameraDeviceRear) {
+        self.imagePickerController.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+    } else{
+        self.imagePickerController.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    }
+    
 }
 
 @end
