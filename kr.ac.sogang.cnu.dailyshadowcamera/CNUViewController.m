@@ -18,6 +18,7 @@
     @property (nonatomic) UIImagePickerController *imagePickerController;
     // Shadow
     @property (nonatomic) UIImage *shadowImg;
+    @property (nonatomic) NSString *groupName;
     // Real
     @property (nonatomic) UIImage *realImg;
     // Transition
@@ -50,22 +51,27 @@
 
 - (void)runImagePicker
 {
-    self.isCameraReady = YES;
-    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
-    imagePickerController.modalPresentationStyle = UIModalPresentationCurrentContext;
-    imagePickerController.delegate = self;
-    self.imagePickerController = imagePickerController;
+    @autoreleasepool {
+        self.isCameraReady = YES;
+        UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+        imagePickerController.delegate = self;
+        self.imagePickerController = imagePickerController;
 
-    self.imagePickerController.sourceType = self.source;
-    if([self source] == UIImagePickerControllerSourceTypeCamera){
-        self.imagePickerController.showsCameraControls = NO;
+        self.imagePickerController.modalPresentationStyle = UIModalPresentationCurrentContext;
+
+        self.imagePickerController.sourceType = self.source;
+        if([self source] == UIImagePickerControllerSourceTypeCamera){
+            self.imagePickerController.showsCameraControls = NO;
+            self.imagePickerController.cameraViewTransform = CGAffineTransformIdentity;
         
-        // xib overlay
-        [[NSBundle mainBundle] loadNibNamed:@"OverlayView" owner:self options:nil];
-        self.overlayView.frame = self.imagePickerController.view.frame;
-        self.imagePickerController.cameraOverlayView = self.overlayView;
+            // xib overlay
+            if(self.overlayView == nil)
+                [[NSBundle mainBundle] loadNibNamed:@"OverlayView" owner:self options:nil];
+            self.overlayView.frame = self.imagePickerController.view.frame;
+            self.imagePickerController.cameraOverlayView = self.overlayView;
         
-        BringImage.image = self.shadowImg;
+            BringImage.image = self.shadowImg;
+        }
     }
     [self presentViewController:self.imagePickerController animated:YES completion:nil];
 }
@@ -86,43 +92,50 @@
     if([self source] == UIImagePickerControllerSourceTypeCamera){
         self.realImg = [info valueForKey:UIImagePickerControllerOriginalImage];
         self.isCameraReady = NO;
+        
+        [self DelayedTransitionCueTo: UIImagePickerControllerSourceTypePhotoLibrary];
         [self dismissViewControllerAnimated:YES completion:NULL];
     }else{
         self.shadowImg = [info valueForKey:UIImagePickerControllerOriginalImage];
+        [self FindingGroupName:info];
         
+        [self DelayedTransitionCueTo: UIImagePickerControllerSourceTypeCamera];
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    }
+}
+
+- (void)FindingGroupName:(NSDictionary *)info
+{
+    @autoreleasepool {
         NSURL *this = [info objectForKey:UIImagePickerControllerReferenceURL];
-        
         ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
-        NSLog(@"Sel: %@\n", this);
         
-        __block NSString *name = nil;
-        [library enumerateGroupsWithTypes:ALAssetsGroupAlbum usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
+        [library enumerateGroupsWithTypes:ALAssetsGroupAlbum usingBlock:^(ALAssetsGroup *group, BOOL *stopSearchLibrary) {
             if(group != nil){
-                [group enumerateAssetsUsingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop2) {
+                
+                [group enumerateAssetsUsingBlock:^(ALAsset *result, NSUInteger index, BOOL *stopSearchGroup) {
                     if(result != nil){
                         if([this isEqual:[result valueForProperty:ALAssetPropertyAssetURL]]){
-                            name = [[group valueForProperty:ALAssetsGroupPropertyName] copy];
-                            NSLog(@"From : %@ Group!!!!", name);
-                            *stop2 = YES;
-                            *stop = YES;
+                            self.groupName = [[group valueForProperty:ALAssetsGroupPropertyName] copy];
+                            *stopSearchLibrary = (*stopSearchGroup = YES);
                         }
                     }
                 }];
+                
             }
         } failureBlock:^(NSError *error) {
             NSLog(@"err:%@\n", [error description]);
         }];
-        NSLog(@"What!\n");
-        [self DelayedTransitionCueTo: UIImagePickerControllerSourceTypeCamera];
-        [self dismissViewControllerAnimated:YES completion:NULL];
-    };
+    }
+    NSLog(@"From : %@ Group!!!!", [self groupName]);
+
 }
 
-
+///////////////////////////////////////////////////////////////  Transition Timer!
 - (void)DelayedTransitionCueTo: (UIImagePickerControllerSourceType)source
 {
     NSDate *fireDate = [NSDate dateWithTimeIntervalSinceNow:DELAY];
-    NSTimer *Timer = [[NSTimer alloc] initWithFireDate:fireDate interval:1.0 target:self selector:@selector(timedTransitionFire:) userInfo:nil repeats:NO];
+    NSTimer *Timer = [[NSTimer alloc] initWithFireDate:fireDate interval:0.5 target:self selector:@selector(timedTransitionFire:) userInfo:nil repeats:NO];
     
     [[NSRunLoop mainRunLoop] addTimer:Timer forMode:NSDefaultRunLoopMode];
     self.Timer = Timer;
@@ -135,6 +148,7 @@
     self.source = self.nextSource;
     [self performSelector:@selector(runImagePicker) withObject:nil afterDelay:DELAY];
 }
+///////////////////////////////////////////////////////////////
 
 
 - (void)didReceiveMemoryWarning
