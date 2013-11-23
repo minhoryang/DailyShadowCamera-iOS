@@ -22,12 +22,13 @@
 @property (nonatomic) UIImage *realImg;
 // Transition
 @property (nonatomic) NSTimer *timer;
-@property (nonatomic) BOOL now;
+@property (nonatomic) BOOL isCameraReady;
 @property (nonatomic) UIImagePickerControllerSourceType source;
 @property (nonatomic) UIImagePickerControllerSourceType nextSource;
 
 @end
 
+#define DELAY 0.50
 
 
 @implementation CNUViewController
@@ -40,14 +41,14 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     self.source = UIImagePickerControllerSourceTypePhotoLibrary;
-    self.now = NO;
-    [self performSelector:@selector(runImagePicker) withObject:nil afterDelay:0.50];
+    self.isCameraReady = NO;
+    [self performSelector:@selector(runImagePicker) withObject:nil afterDelay:DELAY];
 }
 
 
 - (void)runImagePicker
 {
-    self.now = YES;
+    self.isCameraReady = YES;
     UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
     imagePickerController.modalPresentationStyle = UIModalPresentationCurrentContext;
     imagePickerController.delegate = self;
@@ -55,7 +56,7 @@
 
     self.imagePickerController.sourceType = self.source;
     if([self source] == UIImagePickerControllerSourceTypeCamera){
-        self.imagePickerController.showsCameraControls = YES;
+        self.imagePickerController.showsCameraControls = NO;
         
         // xib overlay
         [[NSBundle mainBundle] loadNibNamed:@"OverlayView" owner:self options:nil];
@@ -69,10 +70,11 @@
 
 
 -(void)viewWillAppear:(BOOL)animated {
-    if([self now])
     if([self source] == UIImagePickerControllerSourceTypeCamera){
-        [self presentViewController:self.imagePickerController animated:animated completion:nil];
-        self.imagePickerController.cameraOverlayView = self.overlayView;
+        if([self isCameraReady]){
+            [self presentViewController:self.imagePickerController animated:animated completion:nil];
+            self.imagePickerController.cameraOverlayView = self.overlayView;
+        }
     }
 }
 
@@ -81,7 +83,7 @@
 {
     if([self source] == UIImagePickerControllerSourceTypeCamera){
         self.realImg = [info valueForKey:UIImagePickerControllerOriginalImage];
-        self.now = NO;
+        self.isCameraReady = NO;
         [self dismissViewControllerAnimated:YES completion:NULL];
     }else{
         self.shadowImg = [info valueForKey:UIImagePickerControllerOriginalImage];
@@ -96,9 +98,7 @@
             if(group != nil){
                 [group enumerateAssetsUsingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop2) {
                     if(result != nil){
-                        NSURL *that = [result valueForProperty:ALAssetPropertyAssetURL];
-                        //NSLog(@"new: %@\n", [result valueForProperty:ALAssetPropertyAssetURL]);
-                        if([this isEqual:that]){
+                        if([this isEqual:[result valueForProperty:ALAssetPropertyAssetURL]]){
                             name = [[group valueForProperty:ALAssetsGroupPropertyName] copy];
                             NSLog(@"From : %@ Group!!!!", name);
                             *stop2 = YES;
@@ -119,7 +119,7 @@
 
 - (void)DelayedTransitionCueTo: (UIImagePickerControllerSourceType)source
 {
-    NSDate *fireDate = [NSDate dateWithTimeIntervalSinceNow:2.0];
+    NSDate *fireDate = [NSDate dateWithTimeIntervalSinceNow:DELAY];
     NSTimer *Timer = [[NSTimer alloc] initWithFireDate:fireDate interval:1.0 target:self selector:@selector(timedTransitionFire:) userInfo:nil repeats:NO];
     
     [[NSRunLoop mainRunLoop] addTimer:Timer forMode:NSDefaultRunLoopMode];
@@ -131,7 +131,7 @@
 - (void)timedTransitionFire:(NSTimer *)timer
 {
     self.source = self.nextSource;
-    [self performSelector:@selector(runImagePicker) withObject:nil afterDelay:2];
+    [self performSelector:@selector(runImagePicker) withObject:nil afterDelay:DELAY];
 }
 
 
@@ -144,7 +144,6 @@
 
 - (IBAction)OpacitySliderChanged:(UISlider *)sender {
     BringImage.alpha = [sender value];
-
 }
 
 
