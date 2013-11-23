@@ -28,6 +28,27 @@
                         <action selector="OpacitySliderChanged:" destination="-1" eventType="valueChanged" id="6o6-ma-VMP"/>
                     </connections>
                 </slider>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fym-LA-3QE">
+                    <rect key="frame" x="0.0" y="388" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem title="Item" id="CYp-LE-ma7"/>
+                    </items>
+                    <color key="tintColor" red="1" green="0.053476392900000003" blue="0.30751361519999998" alpha="1" colorSpace="calibratedRGB"/>
+                </toolbar>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Liw-U5-Imd">
+                    <rect key="frame" x="0.0" y="388" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem title="back" id="Ud8-cr-ZZH"/>
+                        <barButtonItem title="take picture" id="gFX-hD-DJf">
+                            <connections>
+                                <action selector="takepicture:" destination="-1" id="64Z-up-APf"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <color key="tintColor" red="1" green="0.053476392900000003" blue="0.30751361519999998" alpha="1" colorSpace="calibratedRGB"/>
+                </toolbar>
             </subviews>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

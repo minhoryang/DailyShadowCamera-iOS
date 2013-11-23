@@ -25,6 +25,8 @@
     @property (nonatomic) BOOL isCameraReady;
     @property (nonatomic) UIImagePickerControllerSourceType source;
     @property (nonatomic) UIImagePickerControllerSourceType nextSource;
+- (IBAction)takepicture:(UIBarButtonItem *)sender;
+
 
 @end
 
@@ -148,4 +150,6 @@
 
 
 
+- (IBAction)takepicture:(UIBarButtonItem *)sender {
+    [self.imagePickerController takePicture];}
 @end
