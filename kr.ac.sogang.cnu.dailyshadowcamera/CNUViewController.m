@@ -9,7 +9,6 @@
 #import "CNUViewController.h"
 
 
-
 @interface CNUViewController ()
 
     // Outlet
@@ -22,39 +21,48 @@
     // Real
     @property (nonatomic) UIImage *realImg;
     // Transition
-    @property (nonatomic) NSTimer *timer;
     @property (nonatomic) BOOL isCameraReady;
     @property (nonatomic) UIImagePickerControllerSourceType source;
     @property (nonatomic) UIImagePickerControllerSourceType nextSource;
 - (IBAction)takepicture:(UIBarButtonItem *)sender;
 - (IBAction)done:(UIBarButtonItem *)sender;
 
-
-
 @end
 
 #define DELAY 0.50
-
 
 @implementation CNUViewController
     @synthesize uiSlider;
     @synthesize BringImage;
 
+///////////////////////////////////////////////////////////////  default functions.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
     self.source = UIImagePickerControllerSourceTypePhotoLibrary;
-    self.isCameraReady = NO;
     [self performSelector:@selector(runImagePicker) withObject:nil afterDelay:DELAY];
 }
+-(void)viewWillAppear:(BOOL)animated {
+    if([self source] == UIImagePickerControllerSourceTypeCamera){
+        if([self isCameraReady]){
+            [self presentViewController:self.imagePickerController animated:animated completion:nil];
+            self.imagePickerController.cameraOverlayView = self.overlayView;
+        }
+    }
+}
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+///////////////////////////////////////////////////////////////
 
 
 - (void)runImagePicker
 {
     @autoreleasepool {
-        self.isCameraReady = YES;
         UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
         imagePickerController.delegate = self;
         self.imagePickerController = imagePickerController;
@@ -62,7 +70,10 @@
         self.imagePickerController.modalPresentationStyle = UIModalPresentationCurrentContext;
 
         self.imagePickerController.sourceType = self.source;
+
+        self.isCameraReady = NO;
         if([self source] == UIImagePickerControllerSourceTypeCamera){
+            self.isCameraReady = YES;
             self.imagePickerController.showsCameraControls = NO;
             self.imagePickerController.cameraViewTransform = CGAffineTransformIdentity;
         
@@ -79,24 +90,11 @@
 }
 
 
--(void)viewWillAppear:(BOOL)animated {
-    if([self source] == UIImagePickerControllerSourceTypeCamera){
-        if([self isCameraReady]){
-            [self presentViewController:self.imagePickerController animated:animated completion:nil];
-            self.imagePickerController.cameraOverlayView = self.overlayView;
-        }
-    }
-}
-
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     if([self source] == UIImagePickerControllerSourceTypeCamera){
         self.realImg = [info valueForKey:UIImagePickerControllerOriginalImage];
-        self.isCameraReady = NO;
-        
-        //[self DelayedTransitionCueTo: UIImagePickerControllerSourceTypePhotoLibrary];
-        //[self dismissViewControllerAnimated:YES completion:NULL];
     }else{
         self.shadowImg = [info valueForKey:UIImagePickerControllerOriginalImage];
         [self FindingGroupName:info];
@@ -111,6 +109,7 @@
     //[self dismissViewControllerAnimated:YES completion:NULL];
     NSLog(@"Cancel\n");
 }
+
 
 - (void)FindingGroupName:(NSDictionary *)info
 {
@@ -135,22 +134,22 @@
             NSLog(@"err:%@\n", [error description]);
         }];
     }
-    NSLog(@"From : %@ Group!!!!", [self groupName]);
-
 }
+
 
 ///////////////////////////////////////////////////////////////  Transition Timer!
 - (void)DelayedTransitionCueTo: (UIImagePickerControllerSourceType)source
 {
-    NSDate *fireDate = [NSDate dateWithTimeIntervalSinceNow:DELAY];
-    NSTimer *Timer = [[NSTimer alloc] initWithFireDate:fireDate interval:0.5 target:self selector:@selector(timedTransitionFire:) userInfo:nil repeats:NO];
+    @autoreleasepool {
+        NSDate *fireDate = [NSDate dateWithTimeIntervalSinceNow:DELAY];
+        NSTimer *Timer = [[NSTimer alloc] initWithFireDate:fireDate interval:0.1 target:self selector:@selector(timedTransitionFire:) userInfo:nil repeats:NO];
+        [[NSRunLoop mainRunLoop] addTimer:Timer forMode:NSDefaultRunLoopMode];
+    }
     
-    [[NSRunLoop mainRunLoop] addTimer:Timer forMode:NSDefaultRunLoopMode];
-    self.Timer = Timer;
     self.nextSource = source;
+    if(self.nextSource != UIImagePickerControllerSourceTypeCamera)
+        self.isCameraReady = NO;
 }
-
-
 - (void)timedTransitionFire:(NSTimer *)timer
 {
     self.source = self.nextSource;
@@ -159,27 +158,19 @@
 ///////////////////////////////////////////////////////////////
 
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
 - (IBAction)OpacitySliderChanged:(UISlider *)sender {
     BringImage.alpha = [sender value];
 }
 
 
-
 - (IBAction)takepicture:(UIBarButtonItem *)sender {
-    [self.imagePickerController takePicture];}
+    [self.imagePickerController takePicture];
+}
+
 
 - (IBAction)done:(UIBarButtonItem *)sender {
-            self.isCameraReady = NO;
-        
-        [self DelayedTransitionCueTo: UIImagePickerControllerSourceTypePhotoLibrary];
-        [self dismissViewControllerAnimated:YES completion:NULL];
-    
+    [self DelayedTransitionCueTo: UIImagePickerControllerSourceTypePhotoLibrary];
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
+
 @end
